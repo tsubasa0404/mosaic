@@ -1,0 +1,44 @@
+//作業時間計算
+//休業日を取得
+function getHolidayList(){
+
+	var holidayList = [
+	//DBから取得
+
+	]
+	return holiday List;
+
+}
+
+function getWorkDay($started, $completed){
+	$started   = (datetime);
+	$completed = (datetime);
+
+	$startedDay    = (date);
+	$startedTime   = (time);
+	$completedDay  = (date);
+	$completedTime = (time);
+
+
+	if($completedDay == $startedDay){ //当日に終了した場合
+
+		$worktime = $completedTime - $startedTime;
+		return $worktime;
+
+	} elseif ($completedDay - $startedDay == 1){ //翌日終了した場合
+
+		$worktime = $completed - $started - 15;
+		return $worktime;
+
+	} else { //当日、翌日終了ではない場合
+
+		//$startedと$completedの間の営業日数を取得
+		var holiday = hoidayList($started, $completed); //開始日と終了日の間の情報をカレンダーから取得
+
+		//sort()でholidayを降順に並び替え。
+		//indexOf($started)とlastIndexOf($completed)を使って、
+		//holidayのindexを指定し、その間にある要素の個数を、holidayCntとして取得
+
+	}
+
+}

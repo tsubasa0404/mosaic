@@ -1,0 +1,2 @@
+SELECT `employees`.`employee_no`, `basic`,`deposit`, `absence`,`late`,`early`,`overtime`,`off_work`,`bonus`, `month`,
+ROUND( (SUM(`basic`) - SUM(`deposit`) - SUM(`absence`) - SUM(`late`) - SUM(`early`) + SUM(`overtime`) + SUM(`off_work`) +  SUM(`bonus`) ),0 ) as Total FROM `salaries`  left join `employees` on (`employees`.`id` = `salaries`.`employee_id`)  where `month` = "2016-05-01" Group by `employees`.`employee_no`
